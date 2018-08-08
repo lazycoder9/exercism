@@ -3,8 +3,6 @@
 (defn to-decimal [binary]
   (->> binary
        reverse
-       (map #(Character/digit % 10))
-       (filter #(not (neg? %)))
-       (map-indexed #(* %2 (Math/pow 2 %1)))
-       (reduce +)
-       int))
+       (map #({\0 0 \1 1} % 0))
+       (map-indexed #(int (* %2 (Math/pow 2 %1))))
+       (reduce +)))
