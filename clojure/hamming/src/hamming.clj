@@ -4,4 +4,4 @@
   (when (= (count strand1) (count strand2))
     (->> (map = strand1 strand2)
          (filter not)
-         count))))
+         count)))
