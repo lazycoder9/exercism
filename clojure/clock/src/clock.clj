@@ -1,18 +1,10 @@
 (ns clock)
 
-(defn clock->string [[h m]]
-  (format "%02d:%02d" h m))
+(defn- norm [c] (mod c 1440))
 
-(defn get-clock-from-minutes [m]
-  [(- (quot m 60) (if (neg? m) 1 0)) (mod m 60)])
+(defn clock [h m] (norm (+ (* 60 h) m)))
 
-(defn get-hour [n]
-  (nth (cycle (range 24)) (+ 24 (mod n 24))))
+(defn add-time [c m] (norm (+ c m)))
 
-(defn clock [hours minutes]
-  (let [[hm m] (get-clock-from-minutes minutes)
-        h (get-hour (+ hours hm))]
-    [h m]))
-
-(defn add-time [[h m] time]
-  (clock h (+ m time)))
+(defn clock->string [c]
+  (format "%02d:%02d" (quot c 60) (mod c 60)))
