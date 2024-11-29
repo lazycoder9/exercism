@@ -1,0 +1,16 @@
+goos: darwin
+goarch: amd64
+pkg: pangram
+cpu: Intel(R) Core(TM) i9-9880H CPU @ 2.30GHz
+BenchmarkPangram-16    	   81907	     13828 ns/op	    3737 B/op	      47 allocs/op
+BenchmarkPangram-16    	   92806	     13302 ns/op	    3737 B/op	      47 allocs/op
+BenchmarkPangram-16    	   89227	     14561 ns/op	    3738 B/op	      47 allocs/op
+BenchmarkPangram-16    	   84132	     13082 ns/op	    3738 B/op	      47 allocs/op
+BenchmarkPangram-16    	   95811	     12857 ns/op	    3738 B/op	      47 allocs/op
+BenchmarkPangram-16    	   95204	     13116 ns/op	    3737 B/op	      47 allocs/op
+BenchmarkPangram-16    	   93068	     13330 ns/op	    3738 B/op	      47 allocs/op
+BenchmarkPangram-16    	   89966	     13128 ns/op	    3738 B/op	      47 allocs/op
+BenchmarkPangram-16    	   87447	     12974 ns/op	    3737 B/op	      47 allocs/op
+BenchmarkPangram-16    	   92911	     12521 ns/op	    3739 B/op	      47 allocs/op
+PASS
+ok  	pangram	14.245s
